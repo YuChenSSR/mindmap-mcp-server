@@ -13,10 +13,11 @@ Or using `uvx`:
 ```bash
 uvx mindmap-mcp-server
 ```
+Or using `docker`.
 
 ## Prerequisites
 
-This package requires Node.js to be installed  using command `python` or `uvx` to run the server.
+This package requires Node.js to be installed when using command `python` or `uvx` to run the server.
 
 
 
