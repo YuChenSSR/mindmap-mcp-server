@@ -11,14 +11,14 @@ import argparse
 from pathlib import Path
 from mcp.server.fastmcp import FastMCP
 
-# 解析命令行参数
+# Parse command line arguments
 def parse_arguments():
     parser = argparse.ArgumentParser(description='MCP Server for converting Markdown to mindmaps')
     parser.add_argument('--return-type', choices=['html', 'filePath'], default='html',
                         help='Whether to return HTML content or file path. Default: html')
     return parser.parse_args()
 
-# 全局配置
+# Global configuration
 args = parse_arguments()
 RETURN_TYPE = args.return_type
 
@@ -103,7 +103,7 @@ def main():
     """Entry point for the mindmap-mcp-server command."""
     global args, RETURN_TYPE
     
-    # 再次解析参数以确保在作为入口点运行时也能获取参数
+    # Parse arguments again to ensure parameters are captured when running as an entry point
     args = parse_arguments()
     RETURN_TYPE = args.return_type
     
