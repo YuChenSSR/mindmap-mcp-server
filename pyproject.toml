@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mindmap-mcp-server"
+version = "0.1.0"
+description = "MCP server for converting Markdown to mindmaps"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+    {name = "YuChenSSR"}
+]
+keywords = ["mcp", "mindmap", "markdown", "claude", "ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "mcp>=1.2.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/YuChenSSR/mindmap-mcp-server"
+"Bug Tracker" = "https://github.com/YuChenSSR/mindmap-mcp-server/issues"
+
+[project.scripts]
+mindmap-mcp-server = "mindmap_mcp_server.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mindmap_mcp_server"]
