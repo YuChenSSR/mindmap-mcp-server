@@ -7,8 +7,20 @@ import tempfile
 import os
 import shutil
 import sys
+import argparse
 from pathlib import Path
 from mcp.server.fastmcp import FastMCP
+
+# 解析命令行参数
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='MCP Server for converting Markdown to mindmaps')
+    parser.add_argument('--return-type', choices=['html', 'filePath'], default='html',
+                        help='Whether to return HTML content or file path. Default: html')
+    return parser.parse_args()
+
+# 全局配置
+args = parse_arguments()
+RETURN_TYPE = args.return_type
 
 # Initialize FastMCP server
 mcp = FastMCP("mindmap-server")
@@ -23,20 +35,14 @@ async def create_temp_file(content: str, extension: str) -> str:
     
     return file_path
 
-async def run_mindmap(input_file: str, output_file: str = None, offline: bool = False, no_toolbar: bool = False) -> str:
-    """Run maindmap markmap-cli on the input file and return the path to the output file."""
+async def run_mindmap(input_file: str, output_file: str = None) -> str:
+    """Run markmap-cli on the input file and return the path to the output file."""
     args = ['npx', '-y', 'markmap-cli', input_file, '--no-open']
     
     if output_file:
         args.extend(['-o', output_file])
     else:
         output_file = os.path.splitext(input_file)[0] + '.html'
-    
-    if offline:
-        args.append('--offline')
-    
-    if no_toolbar:
-        args.append('--no-toolbar')
     
     try:
         process = await asyncio.create_subprocess_exec(
@@ -63,34 +69,29 @@ async def get_html_content(file_path: str) -> str:
 @mcp.tool()
 async def convert_markdown_to_mindmap(
     markdown_content: str,  # The Markdown content to convert
-    return_type: str,       # Whether to return 'html' content or 'filePath'
-    offline: bool = False,  # Generate offline-capable HTML with all assets inlined
-    no_toolbar: bool = False  # Hide the toolbar in the generated mindmap
 ) -> str:
     """Convert Markdown content to a mindmap mind map.
     
     Args:
         markdown_content: The Markdown content to convert
-        return_type: Either 'html' to return the HTML content, or 'filePath' to return the file path
-        offline: Whether to generate offline-capable HTML with all assets inlined
-        no_toolbar: Whether to hide the toolbar in the generated mindmap
     
     Returns:
-        Either the HTML content or the file path to the generated HTML
+        Either the HTML content or the file path to the generated HTML, 
+        depending on the --return-type server argument
     """
     try:
         # Create a temporary markdown file
         input_file = await create_temp_file(markdown_content, '.md')
         
         # Run mindmap on it
-        output_file = await run_mindmap(input_file, offline=offline, no_toolbar=no_toolbar)
+        output_file = await run_mindmap(input_file)
         
         # Check if the output file exists
         if not os.path.exists(output_file):
             raise RuntimeError(f"Output file was not created: {output_file}")
         
-        # Return either the HTML content or the file path
-        if return_type == 'html':
+        # Return either the HTML content or the file path based on command line arg
+        if RETURN_TYPE == 'html':
             html_content = await get_html_content(output_file)
             return html_content
         else:
@@ -100,6 +101,14 @@ async def convert_markdown_to_mindmap(
 
 def main():
     """Entry point for the mindmap-mcp-server command."""
+    global args, RETURN_TYPE
+    
+    # 再次解析参数以确保在作为入口点运行时也能获取参数
+    args = parse_arguments()
+    RETURN_TYPE = args.return_type
+    
+    print(f"Starting mindmap-mcp-server with return type: {RETURN_TYPE}", file=sys.stderr)
+    
     # Initialize and run the server
     mcp.run(transport='stdio')
 

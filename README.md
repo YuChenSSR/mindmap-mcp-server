@@ -33,23 +33,69 @@ Add this server to your `claude_desktop_config.json`:
   "mcpServers": {
     "mindmap": {
       "command": "uvx",
-      "args": ["mindmap-mcp-server"]
+      "args": ["mindmap-mcp-server", "--return-type", "html"]
     }
   }
 }
 ```
+
+or  
+
+recommended:
+
+```json
+{
+  "mcpServers": {
+    "mindmap": {
+      "command": "uvx",
+      "args": ["mindmap-mcp-server", "--return-type", "filePath"]
+    }
+  }
+}
+```
+
+we use `--return-type` to specify the return type of the mindmap content, you can choose `html` or `filePath` according to your needs.
+`html` will return the entire HTML content of the mindmap, which you can preview in your AI client's artifact; 
+
+![return_html_content](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-20/qAEimhwZJDQ3NBLs.png)
+
+![html_preview](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-20/yZKwbaMcY7lLdKua.png)
+
+`filePath` will save the mindmap to a file and return the file path,which you can open in your browser. It can **save your tokens** !
+
+![generate_file](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-20/WDqlWhsoiAYpLmBF.png)
+
+![file_to_open](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-20/jfRIDc5mfvNtKykC.png) 
+
 2. Using a specific Python file in this repository:
+
 
 ```json
 {
   "mcpServers": {
     "mindmap": {
       "command": "python",
-      "args": ["/path/to/your/mindmap_mcp_server/server.py"]
+      "args": ["/path/to/your/mindmap_mcp_server/server.py", "--return-type", "html"]
     }
   }
 }
 ```
+  
+or   
+
+```json
+{
+  "mcpServers": {
+    "mindmap": {
+      "command": "python",
+      "args": ["/path/to/your/mindmap_mcp_server/server.py", "--return-type", "filePath"]
+    }
+  }
+}
+```
+
+
+
 3. Using docker:
 
 First, you pull the image:
@@ -151,9 +197,10 @@ markdown content
 ```
 "
 
-and more
+and more 
 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
+For more details, please see the LICENSE file in [this project repository](https://github.com/YuChenSSR/mindmap-mcp-server)  
