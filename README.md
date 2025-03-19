@@ -27,7 +27,9 @@ This package requires Node.js to be installed when using command `python` or `uv
 
 Add this server to your `claude_desktop_config.json`:
 
-1. using `uvx`:
+<details>
+ 
+ <summary>using `uvx`:</summary>
 
 ```json
 {
@@ -68,7 +70,12 @@ we use `--return-type` to specify the return type of the mindmap content, you ca
 
 ![file_to_open](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-20/jfRIDc5mfvNtKykC.png) 
 
-2. Using [a specific Python file](https://github.com/YuChenSSR/mindmap-mcp-server/blob/main/mindmap_mcp_server/server.py) in this repository:
+</details>
+
+<details>
+<summary>using `python`:</summary>
+
+Using [a specific Python file](https://github.com/YuChenSSR/mindmap-mcp-server/blob/main/mindmap_mcp_server/server.py) in this repository:
 
 
 ```json
@@ -94,10 +101,13 @@ or
   }
 }
 ```
+we use `--return-type` to specify the return type of the mindmap content, you can choose `html` or `filePath` according to your needs. see using \`uvx\` for more details.
 
+</details>
 
+<details>
 
-3. Using docker:
+<summary>using `docker`:</summary>
 
 First, you pull the image:
 
@@ -136,6 +146,8 @@ Converts Markdown to an HTML mind map and saves it to a file in the mounted dire
 	•	toolbar (boolean, optional): Whether to show the toolbar (default: true)  
 **Best for**: Complex mind maps or when you want to **save the tokens** for later use.  
 you can open the html file in your browser to view the mindmap. Also you can use the [iterm-mcp-server](https://github.com/ferrislucas/iterm-mcp) or other terminals' mcp servers to open the file in your browser without interrupting your workflow.  
+
+</details>
 
 ### Troubleshooting 
 
