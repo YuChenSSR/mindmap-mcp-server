@@ -54,7 +54,7 @@ recommended:
 }
 ```
 
-we use `--return-type` to specify the return type of the mindmap content, you can choose `html` or `filePath` according to your needs.
+we use `--return-type` to specify the return type of the mindmap content, you can choose `html` or `filePath` according to your needs.   
 `html` will return the entire HTML content of the mindmap, which you can preview in your AI client's artifact; 
 
 ![return_html_content](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-20/qAEimhwZJDQ3NBLs.png)
