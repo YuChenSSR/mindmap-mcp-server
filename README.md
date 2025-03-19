@@ -67,7 +67,7 @@ we use `--return-type` to specify the return type of the mindmap content, you ca
 
 ![file_to_open](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-20/jfRIDc5mfvNtKykC.png) 
 
-2. Using a specific Python file in this repository:
+2. Using [a specific Python file](https://github.com/YuChenSSR/mindmap-mcp-server/blob/main/mindmap_mcp_server/server.py) in this repository:
 
 
 ```json
