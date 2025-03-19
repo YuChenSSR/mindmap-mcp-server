@@ -190,6 +190,7 @@ In Claude, you can ask:
 
 
 if you want to save the mindmap to a file, and then open it in your browser using the iTerm MCP server:  
+  
 "give a mindmap for the following markdown input_code using a mindmap tool,
 after that,use iterm to open the generated html file.
 input_code:
