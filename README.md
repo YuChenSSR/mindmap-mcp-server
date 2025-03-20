@@ -224,3 +224,7 @@ and more
 
 This project is licensed under the MIT License.
 For more details, please see the LICENSE file in [this project repository](https://github.com/YuChenSSR/mindmap-mcp-server)  
+ 
+---
+ 
+If this project is helpful to you, please consider giving it a Star ⭐️
