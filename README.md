@@ -66,7 +66,8 @@ we use `--return-type` to specify the return type of the mindmap content, you ca
 
 ![return_html_content](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-20/qAEimhwZJDQ3NBLs.png)
 
-![html_preview](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-20/yZKwbaMcY7lLdKua.png)
+![html_preview](https://github.com/user-attachments/assets/93d97fd2-cdb1-4c81-a59d-fa2d58653bac)
+
 
 `filePath` will save the mindmap to a file and return the file path,which you can open in your browser. It can **save your tokens** !
 
