@@ -1,7 +1,7 @@
 # Mindmap MCP Server
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2315ab0a-ffb8-49df-b538-43d76356cec2" alt="mindmap_mcp" width="50%">
+  <img src="https://github.com/user-attachments/assets/24a402dc-1a22-4e9c-a509-95fff746e7ca" alt="mindmap_mcp" width="50%">
 </p>
 
 A Model Context Protocol (MCP) server for converting Markdown content to beautiful mindmaps.
