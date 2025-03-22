@@ -188,7 +188,8 @@ This server provides a tool for converting Markdown content to mindmaps using th
 
 In Claude, you can ask:
 
-"give a mindmap for the following markdown code, using a mindmap tool:
+1. 
+"**give a mindmap for the following markdown code, using a mindmap tool:**
 ```
 # Project Planning
 ## Research
@@ -207,17 +208,33 @@ In Claude, you can ask:
 "
 
 
-if you want to save the mindmap to a file, and then open it in your browser using the iTerm MCP server:  
-  
-"give a mindmap for the following markdown input_code using a mindmap tool,
+if you want to save the mindmap to a file, and then open it in your browser using the iTerm MCP server:   
+
+2. 
+"**give a mindmap for the following markdown input_code using a mindmap tool,
 after that,use iterm to open the generated html file.
-input_code:
+input_code:**
 ```
 markdown content
 ```
 "
 
-and more 
+
+3.
+"**Think about the process of putting an elephant into a refrigerator, and provide a mind map. Open it with a terminal.**"
+
+<details>
+	
+<summary>see the result</summary>
+	
+![aiworkflow](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-22/QUjGnpmUcPfd3lBI.png)
+
+![mindmapinbrowser](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-03-22/w7DZ4shFhLoQZruq.png)
+
+ </details>
+
+ 
+**and more**
 
 
 ## License
@@ -228,3 +245,5 @@ For more details, please see the LICENSE file in [this project repository](https
 ---
  
 If this project is helpful to you, please consider giving it a Star ⭐️
+
+The advancement of technology ought to benefit all individuals rather than exploit the general populace.
