@@ -17,7 +17,7 @@ Or using `uvx`:
 ```bash
 uvx mindmap-mcp-server
 ```
-Or using `docker`.
+Or using `docker` safer and easier.
 
 ## Prerequisites
 
