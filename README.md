@@ -6,6 +6,8 @@
 
 A Model Context Protocol (MCP) server for converting Markdown content to interactive mindmaps.
 
+
+
 ## Installation
 
 ```bash
@@ -174,6 +176,13 @@ If your mind map file isn't accessible:
 **Advanced Usage  
 Using with Other MCP Clients**  
 This server works with any MCP-compatible client, not just Claude for Desktop. The server implements the Model Context Protocol (MCP) version 1.0 specification.  
+
+
+## Attention
+
+Three installation methods have been successfully tested on macOS and Linux. 
+
+For Windows users experiencing issues with `npx` for this MCP, consider using the Docker method. Alternatively, if you use Visual Studio Code, the ["Markmap"](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) extension offers a potentially simpler solution than navigating command-line tools.
 
 ## Features  
 
