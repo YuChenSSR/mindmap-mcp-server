@@ -21,6 +21,12 @@ uvx mindmap-mcp-server
 ```
 Or using `docker` safer and easier.
 
+## Attention
+
+Three installation methods have been successfully tested on macOS and Linux. 
+
+For Windows users experiencing issues with `npx` for this MCP, consider using the Docker method. Alternatively, if you use Visual Studio Code, the ["Markmap"](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) extension offers a potentially simpler solution than navigating command-line tools.
+
 ## Prerequisites
 
 This package requires Node.js to be installed when using command `python` or `uvx` to run the server.
@@ -178,11 +184,7 @@ Using with Other MCP Clients**
 This server works with any MCP-compatible client, not just Claude for Desktop. The server implements the Model Context Protocol (MCP) version 1.0 specification.  
 
 
-## Attention
 
-Three installation methods have been successfully tested on macOS and Linux. 
-
-For Windows users experiencing issues with `npx` for this MCP, consider using the Docker method. Alternatively, if you use Visual Studio Code, the ["Markmap"](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) extension offers a potentially simpler solution than navigating command-line tools.
 
 ## Features  
 
