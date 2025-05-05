@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/yuchenssr-mindmap-mcp-server-badge.png)](https://mseep.ai/app/yuchenssr-mindmap-mcp-server)
+
 # Mindmap MCP Server
 
 <p align="center">
