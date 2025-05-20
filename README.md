@@ -98,7 +98,7 @@ Template to follow:
 </html>
 ```
   
-*Visualization options:*
+*Visualization options:*  (If formulas or symbols don’t display correctly, download the HTML file and open it in a browser.)
 1. View the mindmap  in artifacts (if available):
 ![system_prompt_artifact](https://raw.githubusercontent.com/YuChenSSR/pics/master/imgs/2025-05-20/1i9LIfoVRdCV97HM.png)
   
