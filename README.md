@@ -27,8 +27,6 @@ Three installation methods have been successfully tested on macOS and Linux.
 
 For Windows users experiencing issues with `npx` for this MCP, consider using the Docker method. Alternatively, if you use Visual Studio Code, the ["Markmap"](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) extension offers a potentially simpler solution than navigating command-line tools.
 
-Here's the improved version of your text with clearer instructions and better formatting:
-
 ---
 
 If you're experiencing unresolved issues, you can use my recent system prompt as a Mindmap Assistant instead of using this MCP server.
@@ -109,6 +107,7 @@ Template to follow:
 
 </details>
 
+---
 
 ## Prerequisites
 
